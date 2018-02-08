@@ -1,0 +1,1 @@
+# Greining-reiknirita-verkefni1
