@@ -17,6 +17,7 @@ function game(array){
     document.write(table);
     document.body.appendChild(input);
     document.body.appendChild(message);
+    input.focus();
     input.onchange = function(){
         if(input.value == 1){
             if(turn){
