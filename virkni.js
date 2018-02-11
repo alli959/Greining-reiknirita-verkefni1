@@ -4,14 +4,23 @@
 function game(array){
     document.close();
     var message = document.createElement("h2");
+    if(turn){
+        message.innerHTML = "Player's Turn";
+    }
+    else{
+        message.innerHTML = "computer's Turn";
+    }
+
     var input = document.createElement("input");
     var table = document.createElement("table");
     table = makeTableHTML(board);
     document.write(table);
     document.body.appendChild(input);
+    document.body.appendChild(message);
     input.onchange = function(){
         if(input.value == 1){
             if(turn){
+
                 var k = playerMove(board, 'P1');
                 if(typeof(k) != "string"){
                     turn = !turn
